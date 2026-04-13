@@ -106,4 +106,3 @@ meu-projeto/
 2. Abra um Pull Request (PR) da sua branch para a branch principal.
 3. Garanta que o pipeline de CI (testes e linting) está passando.
 4. Solicite a revisão de pelo menos um membro da equipe antes de realizar o merge.
-```
