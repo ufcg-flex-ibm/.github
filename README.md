@@ -98,11 +98,33 @@ meu-projeto/
 > [!NOTE]
 > É importante salientar que esse é apenas um exemplo de estrutura de repositorio pois cada aplicação tem o seu propósito. Todo repositório deve estar alinhado com boas práticas relacionadas a organização de diretorio e separação de módulos com foco em manutenabilidade.
 
----
-
 ## 4. Fluxo de Pull Requests (Revisão de Código)
 
+### 4.1. Princípios Fundamentais
 1. Nunca faça commits diretos na branch principal (`main` ou `master`).
-2. Abra um Pull Request (PR) da sua branch para a branch principal.
-3. Garanta que o pipeline de CI (testes e linting) está passando.
-4. Solicite a revisão de pelo menos um membro da equipe antes de realizar o merge.
+2. Todo merge deve ser feito através de um Pull Request (PR) após aprovação da equipe.
+3. Solicite a revisão de pelo menos um membro da equipe antes de realizar o merge.
+
+### 4.2. Boas Práticas para Pull Requests
+
+**Mantenha PRs Pequenos e Focados**
+* Quebre grandes features em múltiplos PRs menores e gerenciáveis.
+* PRs menores são mais fáceis de revisar, testar e entender o contexto das mudanças.
+* Isso reduz o risco de bugs e facilita a revertibilidade em caso de problemas.
+
+**Forneça Contexto e Orientação Claros**
+* Use um título descritivo e claro que resuma a mudança ou funcionalidade.
+* Na descrição do PR, explique **por quê** a mudança é necessária, não apenas **o quê** foi mudado.
+* Inclua links issues ou documentação relevante.
+* Referencie a issue relacionada com `Fixes #123` ou `Closes #456` para rastrabilidade automática.
+
+**Revise o Seu Próprio Código Primeiro**
+* Antes de abrir o PR, faça uma auto-revisão cuidadosa do código.
+* Procure por erros de digitação, inconsistências de formatação ou problemas de lógica.
+* Remova logs temporários, código comentado ou ferramentas de debug (ex: `console.log`, print statements).
+* Verifique se o código segue as convenções e padrões do projeto.
+
+**Automatize Testes e Linting**
+* Garanta que os pipelines de CI/CD (testes automatizados e linting) estão passando.
+* A falha no CI é bloqueante: não proceda com o merge até que todos os testes passem.
+* Configure o repositório para exigir que as verificações de CI passem antes de permitir o merge.
