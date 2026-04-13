@@ -1,3 +1,24 @@
+# Bem-vindo à Nossa Organização 🌐
+
+## Quem Somos
+
+Somos um grupo de pesquisa e desenvolvimento dedicado à inovação em tecnologias de rede e inteligência artificial. Nossa missão é explorar e desenvolver aplicações avançadas para ecossistemas de **redes 5G**, com foco principal em soluções de **Inteligência Artificial aplicada à gestão de recursos de rede**.
+
+## Nosso Foco
+
+Nossos projetos cobrem um amplo espectro de atividades ligadas a otimização e gestão inteligente de recursos em ambientes de rede de próxima geração, incluindo:
+
+* **Otimização de Recursos de Rede**: Uso de IA para alocação dinâmica de espectro e recursos em redes 5G.
+* **Predição e Análise**: Modelos de machine learning para previsão de demanda, detecção de anomalias e comportamento da rede.
+* **Automação Inteligente**: Sistemas autônomos para operação e manutenção de infraestrutura 5G.
+* **Pesquisa Aplicada**: Desenvolvimento de algoritmos e técnicas inovadoras que refletem o estado da arte em IA e telecomunicações.
+
+## Sobre Este Documento
+
+Este documento estabelece os **padrões e diretrizes** que toda a nossa organização segue para garantir colaboração eficiente, código de qualidade e manutenibilidade a longo prazo. Quer você esteja iniciando um novo projeto, contribuindo em um existente ou revisando código de colegas, este guia é seu ponto de referência.
+
+---
+
 # Diretrizes de Uso do Git e Padrões de Repositório
 
 Este documento define os padrões adotados pela nossa organização para o uso do Git, nomenclatura de branches, elaboração de mensagens de commit e estrutura mínima exigida para novos repositórios. O objetivo é garantir a manutenabilidade, legibilidade e facilitar a colaboração e revisão de código entre as equipes.
