@@ -41,13 +41,13 @@ As mensagens de commit devem contar a história do repositório. Utilizamos o pa
 ### Regras Principais:
 1. **Comece pelo tipo**: Use os mesmos tipos definidos nas branches (`feat`, `fix`, `chore`, etc.).
 2. **Use o modo imperativo na descrição**: Escreva como se estivesse dando uma ordem ao código. Exemplo: *Adiciona rota de API* em vez de *Adicionado* ou *Adicionando*.
-3. **Seja conciso na primeira linha**: Mantenha o título com até 50 caracteres.
+3. **Seja conciso na primeira linha**: Mantenha o título com algo em torno de 50 caracteres.
 4. **Detalhe no corpo (se necessário)**: Se a alteração for complexa (ex: otimização de uma query no MySQL ou ajustes em um algoritmo de alocação de recursos), use o corpo do commit para explicar a motivação técnica.
 
 **Exemplos Práticos:**
-* `feat(api): cria endpoint para ingestão de dados`
-* `fix(db): corrige vazamento de conexão no pool do Cassandra`
-* `chore(ci): configura pipeline do Github Actions`
+* `feat: cria endpoint para ingestão de dados`
+* `fix: corrige vazamento de conexão no pool do Cassandra`
+* `chore: configura pipeline do Github Actions`
 * `refactor: extrai lógica de autenticação para serviço dedicado`
 
 ---
@@ -60,7 +60,7 @@ Para garantir a padronização e a facilidade de manutenção a longo prazo, tod
 O repositório deve ser autoexplicativo. O `README.md` é a porta de entrada e deve conter, no mínimo:
 * **Descrição do Projeto**: O que o projeto faz e qual problema ele resolve.
 * **Pré-requisitos**: Ferramentas necessárias (ex: Docker, Python 3.10+, Redis).
-* **Configuração e Execução**: Passo a passo de como rodar o projeto localmente.
+* **Configuração e Execução**: Passo a passo de como rodar o projeto localmente ou no ambiente de desenvolvimento relacionado.
 * **Variáveis de Ambiente**: Lista de variáveis necessárias (fornecer um `.env.example`).
 * **Comandos Úteis**: Como rodar linters, formatações e migrações.
 
@@ -69,8 +69,9 @@ O repositório deve ser autoexplicativo. O `README.md` é a porta de entrada e d
 * Deve ignorar credenciais (`.env`, chaves privadas).
 * Deve ignorar diretórios de ambientes virtuais (`venv/`, `.env/`).
 * Deve ignorar caches e artefatos de build (`__pycache__/`, `.pytest_cache/`, `.ipynb_checkpoints/`).
+* Caso o repositorio necessite de algum montante inicial de dados, e importante que esse conjunto seja descrito, mas não é necessário a sua presença no repositorio.
 
-### 3.3. Testes Automatizados
+### 3.3. Testes Automatizados (caso o repositorio guarde código)
 Código não testado é código legado.
 * Um diretório `tests/` deve existir na raiz ou junto aos módulos.
 * É obrigatório incluir testes unitários para a lógica central de negócios antes da aprovação de qualquer Pull Request (PR).
@@ -84,9 +85,9 @@ meu-projeto/
 ├── .github/             # Configurações de CI/CD (ex: Actions)
 ├── docs/                # Documentações arquiteturais e diagramas
 ├── src/                 # Código-fonte principal da aplicação
-│   ├── api/             # Controladores e rotas
-│   ├── core/            # Regras de negócio e casos de uso
-│   ├── infra/           # Integrações externas (bancos de dados, mensageria)
+│   ├── routes/          # Controladores e rotas
+│   ├── services/        # Regras de negócio e casos de uso
+|    ...
 │   └── main.py          # Ponto de entrada da aplicação
 ├── tests/               # Testes automatizados (unitários e de integração)
 ├── .gitignore           # Definição de arquivos a serem ignorados
@@ -94,6 +95,8 @@ meu-projeto/
 ├── README.md            # Documentação principal
 └── requirements.txt     # (Ou pyproject.toml / package.json) Gerenciamento de dependências
 ```
+> [!NOTE]
+> É importante salientar que esse é apenas um exemplo de estrutura de repositorio pois cada aplicação tem o seu propósito. Todo repositório deve estar alinhado com boas práticas relacionadas a organização de diretorio e separação de módulos com foco em manutenabilidade.
 
 ---
 
