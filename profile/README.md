@@ -149,3 +149,31 @@ meu-projeto/
 * Garanta que os pipelines de CI/CD (testes automatizados e linting) estão passando.
 * A falha no CI é bloqueante: não proceda com o merge até que todos os testes passem.
 * Configure o repositório para exigir que as verificações de CI passem antes de permitir o merge.
+
+## 5. Uso da Wiki
+
+Toda US realizada que tiver artefato produzido (código, documento, modelo, dataset, etc.) deve ter uma documentação correspondente na **IBM-WIKI**. Essa documentação garante rastreabilidade do trabalho e facilita o entendimento por outros membros da equipe, mesmo que a tarefa não tenha gerado código (ex: pesquisas, análises, POCs).
+
+A documentação completa de uso da wiki completa está disponível em [IBM-WIKI](https://github.com/ufcg-flex-ibm/wiki).
+
+### 5.1. Nomenclatura do Documento
+O nome do documento deve seguir o padrão `US-<id>`, de forma que os arquivos fiquem ordenados no repositório da wiki.
+
+**Exemplo:** `US-21.md`
+
+### 5.2. Template Padrão
+Toda documentação de US deve seguir o [template padrão da organização](https://github.com/ufcg-flex-ibm/wiki/blob/main/template.md), preenchendo as seções conforme a natureza da tarefa:
+
+- **Identificação**: ID, título, tipo (Implementação / Análise / Pesquisa / Configuração / Documentação / Correção / Outro) e responsável(is).
+- **Objetivo**: o que a tarefa se propunha a resolver ou entregar.
+- **Contexto**: preenchido quando o motivo da tarefa não é óbvio pelo título.
+- **Solução / Abordagem**: como a tarefa foi executada, adaptando o nível de detalhe conforme o tipo (metodologia para análises, arquitetura/fluxo para implementações, etc.).
+- **Tecnologias / Ferramentas Utilizadas**: preenchido apenas se aplicável.
+- **Testes**: preenchido apenas se a tarefa envolveu testes, incluindo pré-requisitos, configuração do ambiente e casos testados.
+- **Artefatos**: referência aos artefatos produzidos (repositórios, notebooks, documentos, modelos, etc.), quando existirem.
+- **Dificuldades Encontradas**: obstáculos, bloqueios ou aprendizados relevantes.
+- **Referências / Links Úteis**: organizados em bullet points, com links diretos.
+
+> [!NOTE]
+> Nem toda US produz código ou testes. O template é flexível: seções não aplicáveis podem ser omitidas, mas a estrutura geral(identificação, objetivos, solução/abordagem) e a nomenclatura devem ser mantidas.
+
